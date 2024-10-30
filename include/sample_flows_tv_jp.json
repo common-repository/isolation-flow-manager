@@ -1,0 +1,99 @@
+{
+ "user_flows": {
+  "isfl_id": 0,
+  "revision": 1,
+  "group_title": "テレビの液晶が映らなくなった",
+  "start_flow_id": 1,
+  "keywords": [],
+  "flows": {
+   "1": {
+    "flow_id": 1,
+    "revision": 1,
+    "created_date": "2020-10-13 23:42:26.00",
+    "pt_id": "pt-1",
+    "status": "open",
+    "title": "電源コンセントは刺さっているか？",
+    "question": "電源プラグがコンセントに刺さっているかをお客様に確認する。",
+    "input": [
+     {
+      "no": "1",
+      "type": "text",
+      "label": "電源プラグの形状"
+     }
+    ],
+    "choices": [
+     {
+      "id": "1",
+      "label": "刺さっている",
+      "next_flow_id": "2",
+      "attachment_id": "0"
+     },
+     {
+      "id": "2",
+      "label": "刺さっていない",
+      "next_flow_id": "3",
+      "attachment_id": "0"
+     }
+    ]
+   },
+   "2": {
+    "flow_id": 2,
+    "revision": 1,
+    "created_date": "2020-10-13 23:42:26.00",
+    "pt_id": "",
+    "status": "open",
+    "title": "テレビの電機はついてるか？",
+    "question": "電源ランプが点灯しているか？をお客様に聞く。",
+    "input": [],
+    "choices": [
+     {
+      "id": "1",
+      "label": "ランプ消灯",
+      "next_flow_id": "4",
+      "attachment_id": "0"
+     },
+     {
+      "id": "2",
+      "label": "ランプ点灯",
+      "next_flow_id": "5",
+      "attachment_id": "0"
+     }
+    ]
+   },
+   "3": {
+    "flow_id": 3,
+    "revision": 1,
+    "created_date": "2020-10-13 23:42:26.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "コンセントを刺してください",
+    "question": "プラグをコンセントにさしてもらうように促してください。",
+    "input": [],
+    "choices": []
+   },
+   "4": {
+    "flow_id": 4,
+    "revision": 1,
+    "created_date": "2020-10-13 23:42:26.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "リモコンの電池がなくなっている",
+    "question": "リモコンの電池を交換していただくように促す。",
+    "input": [],
+    "choices": []
+   },
+   "5": {
+    "flow_id": 5,
+    "revision": 1,
+    "created_date": "2020-10-13 23:42:26.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "故障の可能性",
+    "question": "故障の可能性が高いので、会社に商品を送っていただくように促す。",
+    "input": [],
+    "choices": []
+   }
+  },
+  "group_remarks": ""
+ }
+}

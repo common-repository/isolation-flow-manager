@@ -1,0 +1,99 @@
+{
+ "user_flows": {
+  "isfl_id": 0,
+  "revision": 1,
+  "group_title": "The LCD of the TV does not appear",
+  "start_flow_id": 1,
+  "keywords": [],
+  "flows": {
+   "1": {
+    "flow_id": 1,
+    "revision": 4,
+    "created_date": "2020-10-11 15:25:32.00",
+    "pt_id": "pt-1",
+    "status": "open",
+    "title": "Is the Plug in the outlet?",
+    "question": "You ask customer that \"Check Plug in the outlet\".",
+    "input": [
+     {
+      "no": "1",
+      "type": "text",
+      "label": "plug type"
+     }
+    ],
+    "choices": [
+     {
+      "id": "1",
+      "label": "Plug is in",
+      "next_flow_id": "2",
+      "attachment_id": "0"
+     },
+     {
+      "id": "2",
+      "label": "Plug is not in",
+      "next_flow_id": "3",
+      "attachment_id": "0"
+     }
+    ]
+   },
+   "2": {
+    "flow_id": 2,
+    "revision": 4,
+    "created_date": "2020-10-11 15:25:32.00",
+    "pt_id": "",
+    "status": "open",
+    "title": "Is Power on?",
+    "question": "You ask customer that \"Check Power light on.\"",
+    "input": [],
+    "choices": [
+     {
+      "id": "1",
+      "label": "light off",
+      "next_flow_id": "4",
+      "attachment_id": "0"
+     },
+     {
+      "id": "2",
+      "label": "light on",
+      "next_flow_id": "5",
+      "attachment_id": "0"
+     }
+    ]
+   },
+   "3": {
+    "flow_id": 3,
+    "revision": 4,
+    "created_date": "2020-10-11 15:25:32.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "Do plug in outlet",
+    "question": "You order customer to put plug in outlet.",
+    "input": [],
+    "choices": []
+   },
+   "4": {
+    "flow_id": 4,
+    "revision": 4,
+    "created_date": "2020-10-11 15:25:32.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "There is no battery in remote control",
+    "question": "You order customer to exchange battery in remote control.",
+    "input": [],
+    "choices": []
+   },
+   "5": {
+    "flow_id": 5,
+    "revision": 4,
+    "created_date": "2020-10-11 15:25:32.00",
+    "pt_id": "",
+    "status": "close",
+    "title": "It is probably broken",
+    "question": "The TV is broken.\nYou order customer to send the TV  to our company.\nIt will exchange.",
+    "input": [],
+    "choices": []
+   }
+  },
+  "group_remarks": ""
+ }
+}

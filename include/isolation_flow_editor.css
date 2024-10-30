@@ -1,0 +1,473 @@
+
+/* 切り分けフローセクション */
+.ISFL-editor-section{
+	position: relative;
+	background-color: #FAEBD7;
+}
+
+.ISFL-editor-section table {
+	border-collapse:separate;
+	border-spacing: 0;
+	table-layout: fixed;
+	border: 1px solid #3c6690;
+	font-size: 11px;
+}
+.ISFL-editor-section table th{
+	padding: 5px 2px;
+	text-align: left;
+	font-weight: bold;
+	background-color: #e9f1fb;
+	border: 0.5px solid #3c6690;
+}
+.ISFL-editor-section table td{
+	padding: 5px 2px;
+	text-align: left;
+	border: 0.5px solid #3c6690;
+}
+.ISFL-editor-section input[type=text],
+#wpbody .ISFL-editor-section select,
+.ISFL-editor-section textarea{
+	padding: 2px;
+	font-size: 13px;
+	line-height: 1.2em;
+	-webkit-appearance: checkbox;
+	background: white;
+}
+.ISFL-editor-section input:read-only{
+	color: #2F4F4F;
+	background-color: 	#D3D3D3;
+	cursor: pointer;
+}
+/* リンク */
+.ISFL-editor-section a{
+	display: inline-block;
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	vertical-align: text-top;
+	text-decoration: none;
+	border-bottom: 1px dotted #000;
+	height: 1.5em;
+	padding: 0px;
+	margin: 0px 0px 0px 3px;
+	cursor: pointer;
+}
+.ISFL-editor-section a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* コントローラー */
+.ISFL-editor-section input[type="checkbox"],
+.ISFL-editor-section input[type="radio"]{
+	min-height: inherit;
+	line-height: inherit;
+}
+.ISFL-editor-section input,
+.ISFL-editor-section select,
+.ISFL-editor-section textarea{
+	font-size: 12px;
+	min-height: 20px;
+	line-height: 1.2;
+	margin: 2px;
+	resize: both;
+}
+
+
+
+
+/* 編集画面全体のボタン */
+.ISFL-editor-entire-btn{
+	background-color: darkgreen;
+}
+
+/* コンテナ */
+.ISFL-editor-container{
+	position: relative;
+	background-color: #FAEBD7;
+}
+
+/* Entireのブロック */
+.ISFL-editor-layer-entire{
+	font-weight: bold;
+	color: darkslategray;
+}
+
+
+/* Canvasとプロパティウィンドウのブロック */
+.ISFL-editor-layer-canvas-and-prop{
+	position: relative;
+}
+
+/* canvasブロック */
+.ISFL-editor-canvas{
+	position: relative;
+	overflow: auto;
+	padding: 5px;
+	margin: 0px;
+	background-color: #d8e2cf;
+	/* 線やパディングをwidthなどに含める */
+	box-sizing: border-box;
+	width: calc(100% - 425px);
+	min-width: 500px;
+	height: 70vh;
+}
+.ISFL-editor-canvas canvas{
+	padding: 0px;
+	margin: 0px;
+	background-color: #d8e2cf;
+	/* 線やパディングをwidthなどに含める */
+	box-sizing: border-box;
+}
+
+/* プロパティウィンドウ(アコーディオン部分)  
+ISFL-editor-accordion-propと同じ階層要素に以下のclassを付けることで動作する。
+・ISFL-editor-accordion-prop-smallを付けた要素が幅が小さくなる
+・ISFL-editor-accordion-prop-bigを付けた要素が幅が大きくなる
+*/
+.ISFL-editor-accordion-prop{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 20px;
+	height: 100%;
+	background-color: #67ceff;
+	vertical-align: middle;
+	text-align: center;
+}
+.ISFL-editor-accordion-prop label{
+	display: block;
+	position: relative;
+	width: 20px;
+	height: 100%;
+	text-align: center;
+}
+.ISFL-editor-accordion-prop label span{
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin-top: 150px;
+}
+input.ISFL-editor-accordion-prop-switch{
+	display: none;
+}
+/* アコーディオン押下時：表示幅を小さくする */
+.ISFL-editor-accordion-prop-switch:checked ~ .ISFL-editor-accordion-prop-small{
+	width: 20px;
+}
+/* 		：未押下時に表示するmodifier */
+.ISFL-editor-accordion-prop-switch ~ .ISFL-editor-accordion-prop-small .ISFL-editor-accordion-prop-small--hide{
+	display: inline-block;
+}
+/* 		：押下時に非表示にするmodifier */
+.ISFL-editor-accordion-prop-switch:checked ~ .ISFL-editor-accordion-prop-small .ISFL-editor-accordion-prop-small--hide{
+	display: none;
+}
+/* 		：未押下時に非表示するmodifier */
+.ISFL-editor-accordion-prop-switch ~ .ISFL-editor-accordion-prop-small .ISFL-editor-accordion-prop-small--show{
+	display: none;
+}
+/* 		：押下時に表示するmodifier */
+.ISFL-editor-accordion-prop-switch:checked ~ .ISFL-editor-accordion-prop-small .ISFL-editor-accordion-prop-small--show{
+	display: inline-block;
+}
+/* アコーディオン押下時：表示幅を大きくする */
+.ISFL-editor-accordion-prop-switch:checked ~ .ISFL-editor-accordion-prop-big{
+	width: 90%;
+	min-width: 500px;
+}
+
+/* プロパティウィンドウ(メイン) */
+.ISFL-editor-prop{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 400px;
+	min-height: 300px;
+	max-height: 500px;
+	padding-left: 20px;
+	margin-bottom: 50px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border: solid 0.5px blue;
+	background-color: #FFDEAD;
+	font-size: 13px;
+}
+.ISFL-editor-prop.ISFL-editor-prop--preview-on {
+	position: fixed;
+	z-index: 99999;
+	top: 265px;
+    max-height: 300px;
+    transition: all 300ms 0s ease;
+}
+/* プロパティのプレビューテスト部分 */
+.ISFL-editor-prop-preview{
+	display: flex;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	width: 40px;
+	height: 40px;
+    transition: all 300ms 0s ease;
+}
+/* Modifier：プレビューテストの表示ON */
+.ISFL-editor-prop.ISFL-editor-prop--preview-on .ISFL-editor-prop-preview{
+	display: block;
+	position: fixed;
+	z-index: 9999999999;
+	top: 0px;
+	right: 0px;
+	width: 750px;
+    height: 250px;
+    margin: 2px;
+    border: solid 1px black;
+	background-color: white;
+    overflow-y: scroll;
+    transition: all 300ms 0s ease;
+}
+/* Modifier:プレビューテストが非表示の状態（表示ボタンを表示） */
+.ISFL-editor-prop-preview .ISFL-editor-prop-preview--off{
+	width: 100%;
+    height:100%;
+}
+.ISFL-editor-prop-preview .ISFL-editor-prop-preview--off button{
+	width: 100%;
+	height:100%;
+}
+.ISFL-editor-prop.ISFL-editor-prop--preview-on .ISFL-editor-prop-preview--off{
+	display: none;
+}
+/* Modifier:プレビューテストが表示された状態（プレビューと隠すボタン表示） */
+.ISFL-editor-prop-preview .ISFL-editor-prop-preview--on{
+	display: none;
+	margin: 0px;
+	margin-left: 20px;
+	padding: 1px;
+}
+.ISFL-editor-prop.ISFL-editor-prop--preview-on .ISFL-editor-prop-preview--on{
+	display: block;
+}
+
+
+/* プロパティのアイテム */
+.ISFL-editor-item{
+	border: solid 0.5px blue;
+	padding: 0px;
+	margin-bottom: 2px;
+}
+.ISFL-editor-item .ISFL-editor-item__header{
+	margin: 1px;
+	padding-left: 10px;
+	background-color: #F08080;
+	font-weight: bold;
+}
+.ISFL-editor-item .ISFL-editor-item__main{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+}
+.ISFL-editor-item .ISFL-editor-item__main textarea{
+	min-width: 350px;
+	min-height: 80px;
+}
+.ISFL-editor-item .ISFL-editor-item__input{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+}
+.ISFL-editor-item .ISFL-editor-item--subtitle{
+	margin: 1px;
+	padding-left: 10px;
+	background-color: #FFA07A;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2F4F4F;
+}
+
+/* 選択 */
+.ISFL-editor-item-choice{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+	font-size: 12px;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__header{
+	background-color: #ffffe0;
+}
+.ISFL-editor-item-choice ul{
+	list-style: none;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+.ISFL-editor-item-choice ul li{
+	display: inline-flex;
+	float: left;
+	border-radius: 3px 3px 3px 3px;
+	border: solid 1px blue;
+	padding: 0px;
+	margin-right: 1px;
+}
+.ISFL-editor-item-choice ul li label{
+	margin: 1px;
+	padding: 5px;
+	cursor: pointer;
+}
+.ISFL-editor-item-choice ul li label:hover{
+	background-color: #e6e6fa;
+}
+.ISFL-editor-item-choice ul li input[type="radio"]{
+	vertical-align: top;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__images{
+	display: inline-block;
+	/*width: 100%; 
+	height: 100px;*/
+	text-align: left;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__images img{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	border: solid 0.5px red;
+	margin-left: 10px;
+	max-width: 150px;
+	max-height: 100px;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__images button{
+	vertical-align: top;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__selection{
+	display: inline-block; 
+	vertical-align: middle;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__selection input{
+	width: 250px;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__buttons{
+	padding: 0px;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__buttons button{
+	display: inline-block;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-radius: 4px;
+	color: #ffffff;
+	background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	border-bottom: solid 3px #5e7fca;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__buttons button:active {
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: none;
+}
+.ISFL-editor-item-choice .ISFL-editor-item-choice__buttons button:disabled {
+	background-image: linear-gradient(#aaaaaa 0%, #bbbbbb 100%);
+	box-shadow: 0px 2px 2px;
+	border-bottom: solid 3px #888888;
+}
+
+
+
+
+/* ページング */
+.ISFL-editor-paging{
+	margin: 2px;
+}
+
+
+
+/* フロートList */
+.ISFL-editor-float-list{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+	font-size: 12px;
+	height: 295px;
+	overflow-y: scroll;
+}
+.ISFL-editor-float-list ul{
+	list-style: none;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+.ISFL-editor-float-list ul li{
+	display: inline-flex;
+	float: left;
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 3px 3px 3px 3px;
+	border: solid 1px blue;
+	padding: 0px;
+	margin: 0px 1px 5px 0px;
+}
+/* １つの大きさを中くらいの大きさにする */
+.ISFL-editor-float-list.ISFL-editor-float-list--middle-size ul li{
+	width: 155px;
+	height: 110px;
+	overflow: hidden;
+}
+.ISFL-editor-float-list ul li label{
+	position: relative;
+	margin: 1px;
+	padding: 5px;
+	padding-left: 15px;
+	cursor: pointer;
+	width: 100%;
+	height: calc(100% - 10px);
+}
+.ISFL-editor-float-list ul li label:hover{
+	background-color: #e6e6fa;
+}
+/* liの大きさを超える場合は縦横比を保ってliの大きさにフィット。
+liより小さい画像はそのまま表示 */
+.ISFL-editor-float-list ul li img{
+	margin: 0px;
+	padding: 0px;
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+/* 画像がliより大きかろうが小さかろうがliの大きさに合わせる（縦横比は保）。
+ちなみにobject-fit は2015年くらいから全てのブラウザで対応 */
+.ISFL-editor-float-list.ISFL-editor-float-list--img-fit ul li img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.ISFL-editor-float-list .ISFL-editor-float-list__title{
+	margin: 0px;
+	padding: 0px;
+	position:absolute; 
+	top:0px;
+	left:0px;
+	background-color: rgba(255,255,255,0.5);
+	font-weight: bold;
+}
+/*radioボタンを上下の真ん中に持ってくるための*/
+.ISFL-editor-float-list input[type=radio].ISFL-editor-float-list--middle {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+}
+
+
+/* 説明文 */
+.ISFL-editor-explanation{
+	font-size: 12px;
+	font-weight: bold;
+	color: blue;
+}
+
+
+/* 画像一覧のダイアログ。画像がある場合に表示する説明文*/
+.ISFL-editor-modal-content .ISFL-editor-modal-content--display-if-img-shown{
+	display: none;
+}
+.ISFL-editor-modal-content img[src*=image] + .ISFL-editor-modal-content--display-if-img-shown{
+	display: inline-block;
+	color:blue;
+	font-weight: bold;
+}

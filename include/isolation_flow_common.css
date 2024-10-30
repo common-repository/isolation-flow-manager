@@ -1,0 +1,561 @@
+
+
+
+/* WEBフォントアイコン */
+@font-face {
+  font-family: 'ISFL-fontello';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("./my-fonts/fa-brands-400.eot");
+  src: url("./my-fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("./my-fonts/fa-brands-400.woff2") format("woff2"), url("./my-fonts/fa-brands-400.woff") format("woff"), url("./my-fonts/fa-brands-400.ttf") format("truetype"), url("./my-fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+@font-face {
+  font-family: 'ISFL-fontello';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("./my-fonts/fa-regular-400.eot");
+  src: url("./my-fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./my-fonts/fa-regular-400.woff2") format("woff2"), url("./my-fonts/fa-regular-400.woff") format("woff"), url("./my-fonts/fa-regular-400.ttf") format("truetype"), url("./my-fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+@font-face {
+  font-family: 'ISFL-fontello';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("./my-fonts/fa-solid-900.eot");
+  src: url("./my-fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("./my-fonts/fa-solid-900.woff2") format("woff2"), url("./my-fonts/fa-solid-900.woff") format("woff"), url("./my-fonts/fa-solid-900.ttf") format("truetype"), url("./my-fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.icon-add::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f0fe";
+}
+.icon-folder-plus::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f65e";
+}
+.icon-question-circle::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f059";
+}
+.icon-window-close::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f410";
+}
+.icon-buffer::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f837";
+}
+.icon-bars::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f0c9";
+}
+.icon-exclamation-triangle::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f071";
+}
+.icon-image::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f03e";
+}
+.icon-comment-dots::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f4ad";
+}
+.icon-link::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f0c1";
+}
+.icon-trash-alt::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f2ed";
+}
+.icon-arrow-alt-circle-up::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f35b";
+}
+.icon-arrow-alt-circle-down::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f358";
+}
+.icon-bone::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f5d7";
+}
+.icon-caret-square-right::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f152";
+}
+.icon-atlas::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f558";
+}
+.icon-fa-angle-double-right::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f101";
+}
+.icon-fa-angle-double-left::before{
+	font-family:'ISFL-fontello';
+	font-style: normal;
+	font-weight:900;
+	content: "\f100";
+}
+
+
+/*サブミットボタンが無効になったときのスタイル*/
+input[type="submit"]:disabled {
+	background: #ccc;
+}
+input[type="submit"]:disabled:hover {
+	color: inherit;
+}
+
+
+
+
+/*ヘルプ吹き出しの設定*/
+.ISFL-help{
+	display: inline-block;
+	position: relative;
+	cursor: help;
+}
+.ISFL-help .ISFL-help__link{
+	position: relative;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+	padding: 2px;
+	color: #333333;
+}
+.ISFL-help .ISFL-help__balloon{
+	display: none;
+	z-index: 10000;
+	width: 250px;
+	line-height: 1.1em;
+	position: absolute;
+	top: 0;
+	left: 24px;
+	padding: 5px 5px 5px 11px;
+	border-radius: 5px;
+	background: #33cc99;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+}
+.ISFL-help .ISFL-help__balloon:after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -20px;
+	top: 10px;
+	margin-left: 10px;
+	border: solid transparent;
+	border-color: rgba(51, 204, 153, 0);
+	border-top-color: #33cc99;
+	border-width: 10px;
+	pointer-events: none;
+	content: " ";
+}
+.ISFL-help .ISFL-help__link:hover + .ISFL-help__balloon{
+	display: inline-block;
+}
+/*　ヘルプバルーンの左側表示バージョンのモディファイア（修飾子）*/
+.ISFL-help.ISFL-help--center .ISFL-help__balloon{
+	top: 30px;
+	left: -85px;
+}
+.ISFL-help.ISFL-help--center .ISFL-help__balloon:after {
+	left: 75px;
+	top: -20px;
+	border-top-color: transparent;
+	border-bottom-color: #33cc99;
+}
+
+
+/* ボタン等のポップアップ(説明等をポップアップ表示) */
+div.ISFL-name-popup{
+	display: inline-block;
+	position: relative;
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 0px;
+	overflow: hidden;
+}
+*:hover + div.ISFL-name-popup{
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	overflow: visible;
+}
+*:hover + div.ISFL-name-popup span{
+	position: absolute;
+	top: 5px;
+	left: -10px;
+	width: max-content;
+	padding: 2px;
+	background-color: white;
+	border: solid 0.5px #222222;
+	font-size: 12px;
+}
+
+
+/* tableを使わない表を表示するためのクラス*/
+.ISFL-table{
+	display: table;
+	table-layout: fixed;
+	color: #333333;
+}
+.ISFL-table > ul{
+	list-style: none;
+	display: table-row;
+	border: 0.5px solid #ccc;
+}
+.ISFL-table li{
+	display: table-cell;
+	margin: 0px;
+	padding: 3px 2px;
+	border: 0.5px solid #ccc;
+}
+.ISFL-table ul.ISFL-table--header li,
+.ISFL-table ul li.ISFL-table--header{
+	background-color: #e9f1fb;
+	font-weight: bold;
+}
+
+
+
+
+/*-バウンドするポップアップ-------------------------------------*/
+/*ポップアップ用の外枠。中にコンテンツを書く*/
+.ISFL-popup-content{
+	position: relative;
+	width: 0px;
+	height: 0px;
+	display: inline-block;
+}
+/* バウンドするアニメーション*/
+@keyframes ISFL-BoundAnimation {
+	0% {top: -25px;transform: scale(1); opacity: 1; z-index: 10000;}
+	5% {top: 0px; opacity: 1;z-index: 10000;}
+	90% {top: 0;opacity: 1; z-index: 10000;}
+	95% {top: 0;opacity: 0.5; z-index: 10000;}
+	100% {top: 0;opacity: 0; z-index: 0;}
+}
+.ISFL-popup-content__bound-animation{
+	animation-name: ISFL-BoundAnimation ;
+	animation-duration: 3.0s;
+	animation-timing-function: ease-out;
+	z-index: -10;
+	opacity: 0;
+	position: relative;
+	top: 0px;
+	left: 10px;
+	width: 200px;
+	padding: 2px;
+	background-color: #FFFFFF;
+	font: bold black 12px;
+	border: solid 2px #d27d00;
+	border-radius: 4px;/*角の丸み*/
+}
+
+
+
+
+/*ボタンを表すクラス（機能名のマーキングのため）*/
+.ISFL-btn-edit {
+}
+.ISFL-btn-cancel {
+}
+.ISFL-btn-print {
+}
+
+
+/*タブのアニメーション(戻る)*/
+.slider-tab{
+}
+@keyframes rentalGoodsManagerSlideInRight {
+  from {
+    transform: translateX(-900px);
+  }
+  
+  to {
+    transform: translateX(0px);
+  }
+}
+/*左方向にスライドするアニメーション。*/
+.slider-tab.slider-tab--slide-in-right {
+  animation-name: rentalGoodsManagerSlideInRight;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  
+}
+
+/*タブのアニメーション(進む)*/
+@keyframes rentalGoodsManagerSlideInLeft {
+  from {
+    transform: translateX(900px);
+  }
+  
+  to {
+    transform: translateX(0px);
+  }
+}
+/*右方向にスライドするアニメーション。*/
+.ISFL-slider-tab.slider-tab--slide-in-left {
+  animation-name: rentalGoodsManagerSlideInLeft;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+/*タブをアクティブにする（見える位置に配置する）*/
+.ISFL-slider-tab.slider-tab--active{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/*現在のタブの右側にタブを配置する（見えない位置になる）*/
+.ISFL-slider-tab.slider-tab--right-side{
+	position: absolute;
+	top: 0px;
+	left: calc(100%);
+}
+
+
+
+/* メインボタン */
+.ISFL-btn-square-so-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  vertical-align: middle;
+  color: #FFF;
+  background: #fd9535;/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px #d27d00;/*線色*/
+  cursor: pointer;
+}
+/*押したとき*/
+.ISFL-btn-square-so-pop:active {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+/*ボタンを無効にしたとき*/
+.ISFL-btn-square-so-pop:disabled {
+	background: #ccc;/*色*/
+	cursor: default;
+}
+
+
+
+/* サブボタン */
+.ISFL-btn-square-soft {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  position: relative;
+  text-decoration: none;
+  color: #a5a5a5;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: bold;
+  background: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+  border: solid 2px #ff2288;
+  cursor: pointer;
+}
+/*押したとき*/
+.ISFL-btn-square-soft:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*沈むように*/
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(#fed6e3 0%, #ffbcbc 100%);/*グラデーションを明るく*/
+}
+/*ボタンを無効にしたとき*/
+.ISFL-btn-square-soft:active {
+	background: #ccc;/*色*/
+	cursor: default;
+}
+
+
+
+/* 入力項目のブロック（名前とinputボックス） */
+.ISFL-input-block{
+	display: inline-block;
+	vertical-align: top;
+}
+.ISFL-input-block .ISFL-input-block__name {
+	display: inline-block;
+	font-weight: bold;
+	color: #23282D;
+	vertical-align: top;
+	margin-top: 0.2em;
+}
+
+
+
+/* クローズボタンのカーソル */
+.icon-window-close{
+	cursor: pointer;
+}
+
+
+
+
+
+/*モーダルウィンドウ*/
+input.ISFL-editor-modal-switch {
+	display: none;
+}
+.ISFL-editor-modal-overlay {
+	display: none;
+    position: fixed;
+    z-index: 999999;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background-color: rgba(255,255,255, 0.3);
+    overflow-y: auto;
+    /* スマホ用スクロール */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    /*表示幅など*/
+    width: 100%;
+    height: 120%;
+}
+/** Overlayの上にのせるModify。オーバーレイの上に表示するポップアップなどに適用 **/
+.ISFL-editor-modal-overlay--front{
+	z-index: 9999999;
+}
+input.ISFL-editor-modal-switch:checked + .ISFL-editor-modal-overlay {
+    display: block;
+}
+.ISFL-editor-modal-content {
+    position: fixed;
+	z-index: 9999999;
+    top: 20%;
+    left: 20%;
+    background-color: rgba(255,255,255, 1.0);
+    border: 2px double #aaaaaa;
+    overflow-y: auto;
+    /* スマホ用スクロール */
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    /*表示幅など*/
+    width: 70%;
+    height: 70%;
+	font-size: 12px;
+	overflow: hidden;
+}
+.ISFL-editor-modal-content header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 15px 10px;
+	background-color: #23282D;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 18px;
+	top: 0;
+	text-align: left;
+	cursor: move;
+}
+.ISFL-editor-modal-content .ISFL-editor-modal-content--body{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	padding: 15px 10px;
+	width:  calc(100% - 30px);
+	height: calc(100% - 80px);
+	overflow-y: auto;
+}
+
+
+/** 処理中の画像 **/
+.ISFL-editor-modal-overlay-processing{
+	display: none;
+	position: fixed;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(255,255,255, 0.3);
+	overflow-y: auto;
+	/* スマホ用スクロール */
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	/*表示幅など*/
+	width: 100%;
+	height: 120%;
+	text-align: center; 
+	vertical-align: middle;
+}
+
+/* 処理中のアニメーション(displayAlert()関数で使用する) */
+.ISFL-display-alert-processing {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	background: blue;
+	animation: ISFL_displayAlertProcessingAnime  2s infinite alternate none running;
+}  
+@keyframes ISFL_displayAlertProcessingAnime {
+	0% {
+		transform: scale(.5);
+	  }
+	
+	  50% {
+		transform: scale(.8) rotate(-45deg);
+		background: red;
+	  }
+	
+	  100% {
+		transform: scale(1) rotate(180deg);
+		background: blue;
+	  }
+}
+
+/* ダイアログの中のスクロールするブロック */
+.ISFL-dialog-scroll-window{
+	padding: 10px 15px 5px 15px;
+	margin: 2px 0px;
+	font-size: 12px;
+	height: 295px;
+	overflow-y: auto;
+}
+
+

@@ -1,0 +1,238 @@
+
+/*
+説明書き。
+*/
+.ISFL-user-explanation{
+	font-weight: bold;
+	font-size: 15px;
+	color: blue;
+}
+
+
+
+
+
+/* 切り分けフローセクション */
+.ISFL-user-section{
+	position: relative;
+	background-color: #FAEBD7;
+}
+.ISFL-user-section table {
+	border-collapse:separate;
+	border-spacing: 0;
+	table-layout: fixed;
+	border: 1px solid #3c6690;
+	font-size: 11px;
+}
+.ISFL-user-section table th{
+	padding: 5px 2px;
+	text-align: left;
+	font-weight: bold;
+	background-color: #e9f1fb;
+	border: 0.5px solid #3c6690;
+}
+.ISFL-user-section table td{
+	padding: 5px 2px;
+	text-align: left;
+	border: 0.5px solid #3c6690;
+}
+.ISFL-user-section input:read-only{
+	color: #2F4F4F;
+	background-color: 	#D3D3D3;
+	cursor: pointer;
+}
+.ISFL-user-section input:disabled{
+	color: #2F4F4F;
+	background-color: 	#D3D3D3;
+}
+/* リンク */
+.ISFL-user-section a{
+	display: inline-block;
+	transition: .3s;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	vertical-align: text-top;
+	text-decoration: none;
+	border-bottom: 1px dotted #000;
+	height: 1.5em;
+	padding: 0px;
+	margin: 0px 0px 0px 3px;
+	cursor: pointer;
+}
+.ISFL-user-section a:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/* コントローラー */
+.ISFL-user-section input[type="checkbox"],
+.ISFL-user-section input[type="radio"]{
+	min-height: inherit;
+	line-height: inherit;
+}
+.ISFL-user-section input,
+.ISFL-user-section select,
+.ISFL-user-section textarea{
+	font-size: 12px;
+	min-height: 20px;
+	line-height: 1.2;
+	margin: 2px;
+	resize: both;
+}
+
+
+/* コンテナ */
+.ISFL-main-container{
+	position: relative;
+}
+
+/* 切り分けフローの左側メニュー */
+.ISFL-user-left-sidebar{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 30px;
+	margin: 0px;
+	padding: 2px;
+}
+
+/* 上部の隠し機能 */
+input.ISFL-user-flows-function-switch{
+	display: none;
+}
+.ISFL-user-flows-function-switch:checked + .ISFL-user-flows-function{
+	display: block;
+}
+.ISFL-user-flows-function{
+	display: none;
+	margin: 0px 0px 2px 30px;
+	padding: 2px;
+}
+.ISFL-user-flows-function.ISFL-user-flows-function--show{
+	display: block;
+}
+
+
+/*
+切り分けフローのリストのタイトル
+*/
+.ISFL-user-title{
+	padding: 2px;
+	margin: 3px;
+	margin-left: 30px; /* 左側メニューのための余白 */
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #FFFF88;
+	border-left: solid 5px #99CC99;
+	border-bottom: solid 2px #99CC99;
+}
+
+/*
+切り分けフローのリストのコンテナ
+*/
+.ISFL-user-container{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	margin-left: 30px; /* 左側メニューのための余白 */
+	font-size: 15px;
+	border: solid blue 0.5px;
+}
+
+/**/
+.ISFL-user-item{
+	border: solid 0.5px blue;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 2px;
+	list-style-type: none;
+	font-size: 14px;
+}
+.ISFL-user-item .ISFL-user-item__header{
+	margin: 1px;
+	padding-left: 10px;
+	background-color: #fffacd;
+}
+.ISFL-user-item .ISFL-user-item__main{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+	overflow-wrap: anywhere;
+	word-break: break-all;
+}
+.ISFL-user-item .ISFL-user-item__input{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+}
+.ISFL-user-item-choice{
+	padding: 10px 15px 5px 15px;
+	margin: 0px;
+	line-height: 1.2em;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__header{
+	background-color: #ffffe0;
+}
+.ISFL-user-item-choice ul{
+	list-style: none;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+}
+.ISFL-user-item-choice ul li{
+	display: inline-flex;
+	float: left;
+	border-radius: 3px 3px 3px 3px;
+	border: solid 1px blue;
+	padding: 0px;
+	margin-right: 1px;
+	width: 165px;
+	max-height: 150px;
+	overflow: hidden;
+}
+.ISFL-user-item-choice ul li label{
+	margin: 1px;
+	padding: 0px;
+	width: 100%;
+	cursor: pointer;
+}
+.ISFL-user-item-choice ul li label:hover{
+	background-color: #e6e6fa;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__images{
+	width: 150px; 
+	height: 100px;
+	text-align: center;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__images img{
+	max-width: 150px;
+	max-height: 100px;
+}
+/*ラジオボタンと選択の文字表示部分*/
+.ISFL-user-item-choice .ISFL-user-item-choice__selection{
+	display: -webkit-flex;
+    display: flex;
+	vertical-align: middle;
+	height: 2.2em;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__buttons{
+	vertical-align: middle;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__buttons button{
+	display: inline-block;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-radius: 4px;
+	color: #ffffff;
+	background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	border-bottom: solid 3px #5e7fca;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__buttons button:active {
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+	border-bottom: none;
+}
+.ISFL-user-item-choice .ISFL-user-item-choice__buttons button:disabled {
+	background-image: linear-gradient(#aaaaaa 0%, #bbbbbb 100%);
+	box-shadow: 0px 2px 2px;
+	border-bottom: solid 3px #888888;
+}
